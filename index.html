@@ -65,7 +65,7 @@
             </button>
             <button onclick="switchMainTab('services_matrix')" id="tab-btn-services" class="flex items-center gap-2 px-3 py-1.5 rounded-lg transition text-slate-400 hover:text-white whitespace-nowrap">
                 <i class="fa-solid fa-list-check"></i>
-                <span>Service Matrix</span>
+                <span>Developmental Services</span>
             </button>
         </div>
 
@@ -126,7 +126,7 @@
                 <!-- Heatmap Gradient Scale Bar -->
                 <div id="ctrl-legend-group" class="pt-1 border-t border-slate-800/80">
                     <div class="flex justify-between text-[11px] font-semibold mb-1">
-                        <span id="legend-title" class="text-slate-300">Pediatrics (/M)</span>
+                        <span id="legend-title" class="text-slate-300">Pediatrics (/Million)</span>
                         <span id="legend-range-tag" class="text-teal-400 font-mono">0 - 93.55</span>
                     </div>
                     <div id="legend-bar" class="h-2.5 w-full rounded-full bg-gradient-to-r from-slate-900 via-teal-800 to-teal-400 border border-slate-800"></div>
@@ -171,7 +171,7 @@
                     <div id="panel-section-specialists" class="mt-4 space-y-2">
                         <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center justify-between">
                             <span>Pediatric Subspecialty Workforce</span>
-                            <span class="text-[10px] text-teal-400 font-normal">Count | Rate/M</span>
+                            <span class="text-[10px] text-teal-400 font-normal">Rate/Million | Count </span>
                         </h3>
 
                         <div class="bg-slate-950/80 p-2.5 rounded-xl border border-slate-800/80 flex items-center justify-between">
@@ -181,7 +181,7 @@
                                 </div>
                                 <div>
                                     <div class="text-xs font-semibold text-white">Pediatrics</div>
-                                    <div id="detail-peds-rate" class="text-[10px] text-teal-400 font-mono">71.37 /M</div>
+                                    <div id="detail-peds-rate" class="text-[10px] text-teal-400 font-mono">71.37 /Million</div>
                                 </div>
                             </div>
                             <div id="detail-peds-count" class="text-xs font-bold text-sky-400 font-mono">403</div>
@@ -194,7 +194,7 @@
                                 </div>
                                 <div>
                                     <div class="text-xs font-semibold text-white">Pediatric Cardiology</div>
-                                    <div id="detail-cardio-rate" class="text-[10px] text-teal-400 font-mono">2.30 /M</div>
+                                    <div id="detail-cardio-rate" class="text-[10px] text-teal-400 font-mono">2.30 /Million</div>
                                 </div>
                             </div>
                             <div id="detail-cardio-count" class="text-xs font-bold text-rose-400 font-mono">13</div>
@@ -207,7 +207,7 @@
                                 </div>
                                 <div>
                                     <div class="text-xs font-semibold text-white">Developmental Pediatrics</div>
-                                    <div id="detail-dev-rate" class="text-[10px] text-teal-400 font-mono">2.30 /M</div>
+                                    <div id="detail-dev-rate" class="text-[10px] text-teal-400 font-mono">2.30 /Million</div>
                                 </div>
                             </div>
                             <div id="detail-dev-count" class="text-xs font-bold text-amber-400 font-mono">13</div>
@@ -220,7 +220,7 @@
                                 </div>
                                 <div>
                                     <div class="text-xs font-semibold text-white">Neonatal-Perinatal</div>
-                                    <div id="detail-neo-rate" class="text-[10px] text-teal-400 font-mono">3.72 /M</div>
+                                    <div id="detail-neo-rate" class="text-[10px] text-teal-400 font-mono">3.72 /Million</div>
                                 </div>
                             </div>
                             <div id="detail-neo-count" class="text-xs font-bold text-indigo-400 font-mono">21</div>
@@ -317,7 +317,7 @@
                 </div>
 
                 <div class="flex items-center gap-3">
-                    <!-- Service Matrix Sub-Filter -->
+                    <!-- Developmental Services Sub-Filter -->
                     <div id="matrix-category-filter" class="hidden items-center bg-slate-900 border border-slate-800 rounded-xl p-1 text-xs">
                         <button onclick="setMatrixCategory('all')" id="btn-mat-all" class="px-2.5 py-1 rounded-lg font-semibold bg-teal-600 text-white">All Categories</button>
                         <button onclick="setMatrixCategory('therapy')" id="btn-mat-therapy" class="px-2.5 py-1 rounded-lg font-semibold text-slate-400 hover:text-white">Therapy</button>
@@ -917,7 +917,7 @@
             document.getElementById('detail-ei-body').innerText = data.ei.body;
             document.getElementById('detail-ei-body').title = data.ei.body;
 
-            // Populate Sidebar Service Matrix Badges
+            // Populate Sidebar Developmental Services Badges
             const s = data.services;
             
             // Therapy
