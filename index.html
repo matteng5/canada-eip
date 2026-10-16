@@ -578,7 +578,7 @@
                 name: "New Brunswick",
                 pop: 866497,
                 peds: { count: 28, rate: 32.31 },
-                cardio: { count: "N/A", rate: "N/A" },
+                cardio: { count: "0", rate: "0" },
                 dev: { count: 2, rate: 2.31 },
                 neo: { count: 3, rate: 3.46 },
                 ei: {
@@ -616,8 +616,8 @@
                 name: "Prince Edward Island",
                 pop: 181715,
                 peds: { count: 17, rate: 93.55 },
-                cardio: { count: "N/A", rate: "N/A" },
-                dev: { count: "N/A", rate: "N/A" },
+                cardio: { count: "0", rate: "0" },
+                dev: { count: "0", rate: "0" },
                 neo: { count: 3, rate: 16.51 },
                 ei: {
                     program: "Best Start Program",
@@ -654,9 +654,9 @@
                 name: "Yukon",
                 pop: 48493,
                 peds: { count: 2, rate: 41.24 },
-                cardio: { count: "N/A", rate: "N/A" },
-                dev: { count: "N/A", rate: "N/A" },
-                neo: { count: "N/A", rate: "N/A" },
+                cardio: { count: "0", rate: "0" },
+                dev: { count: "0", rate: "0" },
+                neo: { count: "0", rate: "0" },
                 ei: {
                     program: "Child Development Centre",
                     age: "0-5",
@@ -673,9 +673,9 @@
                 name: "Northwest Territories",
                 pop: 45808,
                 peds: { count: 1, rate: 21.83 },
-                cardio: { count: "N/A", rate: "N/A" },
-                dev: { count: "N/A", rate: "N/A" },
-                neo: { count: "N/A", rate: "N/A" },
+                cardio: { count: "0", rate: "0" },
+                dev: { count: "0", rate: "0" },
+                neo: { count: "0", rate: "0" },
                 ei: {
                     program: "Early Childhood Intervention Program",
                     age: "0-6",
@@ -692,9 +692,9 @@
                 name: "Nunavut",
                 pop: 42215,
                 peds: { count: 3, rate: 71.06 },
-                cardio: { count: "N/A", rate: "N/A" },
-                dev: { count: "N/A", rate: "N/A" },
-                neo: { count: "N/A", rate: "N/A" },
+                cardio: { count: "0", rate: "0" },
+                dev: { count: "0", rate: "0" },
+                neo: { count: "0", rate: "0" },
                 ei: {
                     program: "Early Learning and Child Care",
                     age: "0-6",
@@ -895,16 +895,16 @@
 
             // Populate Specialists Cards
             document.getElementById('detail-peds-count').innerText = data.peds.count;
-            document.getElementById('detail-peds-rate').innerText = data.peds.rate !== "N/A" ? `${data.peds.rate} /M` : "N/A";
+            document.getElementById('detail-peds-rate').innerText = data.peds.rate !== "0" ? `${data.peds.rate} /M` : "0";
 
             document.getElementById('detail-cardio-count').innerText = data.cardio.count;
-            document.getElementById('detail-cardio-rate').innerText = data.cardio.rate !== "N/A" ? `${data.cardio.rate} /M` : "N/A";
+            document.getElementById('detail-cardio-rate').innerText = data.cardio.rate !== "0" ? `${data.cardio.rate} /M` : "0";
 
             document.getElementById('detail-dev-count').innerText = data.dev.count;
-            document.getElementById('detail-dev-rate').innerText = data.dev.rate !== "N/A" ? `${data.dev.rate} /M` : "N/A";
+            document.getElementById('detail-dev-rate').innerText = data.dev.rate !== "0" ? `${data.dev.rate} /M` : "0";
 
             document.getElementById('detail-neo-count').innerText = data.neo.count;
-            document.getElementById('detail-neo-rate').innerText = data.neo.rate !== "N/A" ? `${data.neo.rate} /M` : "N/A";
+            document.getElementById('detail-neo-rate').innerText = data.neo.rate !== "0" ? `${data.neo.rate} /M` : "0";
 
             const totalCount = getNumericValue(abbr, 'combined', 'count');
             const totalRate = ((totalCount / data.pop) * 1000000).toFixed(1);
